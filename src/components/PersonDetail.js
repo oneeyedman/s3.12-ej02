@@ -2,9 +2,11 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import './PersonDetail.css';
 
+
 class PersonDetail extends React.Component {
   makeDummies(total, id, img) {
     const dummies = [];
+    
     for (let i=0; i<= (total); i++) {
       dummies.push(<div className="random-detail__dummy" key={i} style={{backgroundImage: `url(${img})`}}></div>);
     }
