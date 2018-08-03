@@ -12,7 +12,7 @@ class Home extends React.Component {
           {criaturas.map((c,i)=> {
             return (
               <li className="random-person" key={c.login.sha1}>
-                <Link to={'/person/${i}'}><RandomPerson data={c} /></Link>
+                <Link to={`/person/${i}`}><RandomPerson data={c} /></Link>
               </li>
             );
           })}

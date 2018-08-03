@@ -4,7 +4,7 @@ import PersonDetail from './components/PersonDetail.js';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
 
-const urlCriaturas = 'https://randomuser.me/api/?results=5';
+const urlCriaturas = 'https://randomuser.me/api/?results=48';
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path="/" render={ () => <Home criaturas={this.state.criaturas} /> } />
-          <Route path="/person/:id" component={ PersonDetail } />
+          <Route path="/person/:id" render={ props => <PersonDetail match={props.match} criaturas={this.state.criaturas} /> } />
         </Switch>
       </div>
     );
