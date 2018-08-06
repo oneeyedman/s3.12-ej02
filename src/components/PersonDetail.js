@@ -17,7 +17,7 @@ class PersonDetail extends React.Component {
     const personId = parseInt(this.props.match.params.id, 10);
     const criaturas = this.props.criaturas;
     
-    if (criaturas.length >= personId) {
+    if (criaturas.length >= 1) {
       const imgPath = criaturas[personId].picture.large;
       const name = `${criaturas[personId].name.first} ${criaturas[personId].name.last}`;
       const age = criaturas[personId].dob.age;
@@ -37,7 +37,7 @@ class PersonDetail extends React.Component {
         </section>
       );
     } else {
-      return  <p className="no-results">Dónde está mi criatura?</p>
+      return <p>?</p>
     }
   }
 }
